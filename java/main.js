@@ -5,8 +5,7 @@ function toggleMenu() {
 }
 
 // CARROUSEL (Garde uniquement la logique d'images)
-const images = ["../img/campus.jpg", "../img/campus2.jpg", "../img/campus3.jpg"]; 
-let index = 0;
+const images = ["img/campus.jpg", "img/campus2.jpg", "img/campus3.jpg"];let index = 0;
 const carousel = document.getElementById("carousel-image");
 
 if (carousel) {
@@ -39,4 +38,5 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add("light");
         if (btn) btn.innerText = "🌙 Mode sombre";
     }
+
 });
