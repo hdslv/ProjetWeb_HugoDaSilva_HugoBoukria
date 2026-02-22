@@ -20,10 +20,10 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     }
 });
 
-// Remplace tes alert() par ceci :
 if(nom.length < 3){
     document.getElementById("nom").style.borderColor = "red";
     e.preventDefault();
 } else {
     document.getElementById("nom").style.borderColor = "#ccc";
+
 }
