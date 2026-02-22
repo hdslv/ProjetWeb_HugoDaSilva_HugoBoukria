@@ -1,9 +1,3 @@
-// MENU MOBILE (Toujours utile)
-function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("active");
-}
-
 const images = ["img/campus.jpg", "img/campus2.jpg", "img/campus3.jpg"]; 
 let index = 0;
 
@@ -43,4 +37,5 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
