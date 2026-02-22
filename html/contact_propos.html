@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & À propos - EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="dark">
+
+<header>
+    <div class="logo-container">
+        <img src="../img/logo.jpg" alt="Logo EFREI">
+        <h1>Département Informatique</h1>
+    </div>
+
+    <div class="nav-wrapper">
+        <nav id="nav">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="cours.html">Formations</a></li>
+                <li><a href="equipe.html">Équipe</a></li>
+                <li><a href="contact_propos.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+<section class="page-header contact-bg">
+    <div class="overlay-text">
+        <h2>Contact & Informations</h2>
+        <p>Une question ? Notre équipe est à votre écoute.</p>
+    </div>
+</section>
+
+<section class="contact-container">
+    <div class="contact-info">
+        <div class="info-card">
+            <h3>📍 Adresse</h3>
+            <p>Campus de Villejuif<br>30-32 Avenue de la République<br>94800 Villejuif</p>
+        </div>
+        <div class="info-card">
+            <h3>📞 Téléphone</h3>
+            <p>01 46 77 46 77</p>
+        </div>
+        <div class="info-card">
+            <h3>✉️ Email</h3>
+            <p>informatique@efrei.fr</p>
+        </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+        <h3>Envoyez-nous un message</h3>
+        <form id="contactForm" class="modern-form">
+            <div class="form-group">
+                <input type="text" id="nom" placeholder="Votre nom complet" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Votre adresse email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">Comment candidater ? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Les candidatures se font principalement via Parcoursup pour les bacheliers ou via notre portail d'admission pour les admissions parallèles.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">L'alternance est-elle possible ? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Oui, l'alternance est disponible à partir de la 3ème année de Bachelor et durant tout le Cycle Ingénieur.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 EFREI - Département Informatique. Tous droits réservés par Hugo Da Silva et Hugo Boukria.</p>
+        <div class="footer-links">
+            <a href="../index.html" class="about-link">Retour à l'accueil</a>
+            <a href="contact_propos.html" class="about-link">À propos</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../java/main.js"></script>
+<script>
+    // Petit script local pour l'accordéon FAQ
+    function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const span = button.querySelector('span');
+        
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            span.innerText = "+";
+        } else {
+            answer.style.display = "block";
+            span.innerText = "-";
+        }
+    }
+</script>
+</body>
+</html>
