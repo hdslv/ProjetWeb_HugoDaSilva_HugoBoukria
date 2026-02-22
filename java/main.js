@@ -4,16 +4,19 @@ function toggleMenu() {
     nav.classList.toggle("active");
 }
 
-// CARROUSEL (Garde uniquement la logique d'images)
-const images = ["img/campus.jpg", "img/campus2.jpg", "img/campus3.jpg"];let index = 0;
-const carousel = document.getElementById("carousel-image");
+const images = ["img/campus.jpg", "img/campus2.jpg", "img/campus3.jpg"]; 
+let index = 0;
 
-if (carousel) {
-    setInterval(() => {
+function changeImage() {
+    const carousel = document.getElementById("carousel-image");
+    if (carousel) {
         index = (index + 1) % images.length;
         carousel.src = images[index];
-    }, 5000);
+    }
 }
+
+// Change l'image toutes les 5 secondes
+setInterval(changeImage, 5000);
 
 // Fonction pour basculer le mode
 function toggleDarkMode() {
@@ -40,3 +43,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
